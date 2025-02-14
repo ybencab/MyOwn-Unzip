@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
 
   if (decompress_file(fptr, stdout) != 0) {
     fprintf(stderr, "An error has ocurred");
+    fclose(fptr);
     exit(1);
   }
   
